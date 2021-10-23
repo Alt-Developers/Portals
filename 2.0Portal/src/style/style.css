@@ -417,4 +417,38 @@ footer a:hover {
   padding: 2rem;
 }
 
+.p404__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 10vh;
+  background-color: #1b1b1b;
+}
+.p404__header--logo-wrapper {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+}
+.p404__header--logo-wrapper img {
+  height: 9vh;
+}
+.p404__header--title {
+  font-size: 4vh;
+  display: flex;
+  align-items: center;
+}
+.p404__wrapper-content {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p404__wrapper-content--content {
+  background-color: #404040;
+  padding: 3rem;
+  border-radius: 1.1rem;
+}
+.p404__wrapper-content--content p {
+  font-size: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
