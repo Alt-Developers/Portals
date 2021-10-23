@@ -6,40 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./src/img/icon.png" />
     <link rel="stylesheet" href="./src/style/style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <title>System 13 | Home</title>
+    <title>Portal | Github</title>
   </head>
   <body>
-    <section id="home"></section>
     <nav>
       <div class="logo">
         <img src="./src/img/ssl.png" alt="SS System 13 Logo" />
       </div>
-      <a href="./index.html"><li class="nav__1">Home</li></a>
+      <a href="./index.html"
+        ><li class="nav__1">Home<i class="bx bx-home"></i></li
+      ></a>
       <a href="./dev.html" class="nav__2"><li>Developers</li></a>
-      <a href="./github.html" class="active nav__3"><li>Github</li></a>
-      <a href="./docs.html" class="nav__4"><li>Docs</li></a>
+      <a href="#" class="active nav__3"><li>Github</li></a>
+      <a href="./docs.html" class="nav__4"><li>DOCS</li></a>
     </nav>
-    <section class="hero" id="hero">
-      <div class="hero__content">
-        <div class="hero__text-wrapper">
-          <h1 class="hero__text--1">
-            Come back<br />
-            Later <br />
-            We're In development
-          </h1>
-          <p>Our Portal 2.0 is still in development</p>
+    <section class="learn-more" id="learnMore">
+      <div class="learn-more__odd">
+        <div class="big1">
+          <img
+            class="learnmore-img"
+            src="./src/img/git.jpg"
+            alt="Valorant White"
+          />
         </div>
-        <!-- <a href="#learnMore">
-          <button class="u-remove-a-eff">Learn More &darr;</button>
-        </a> -->
+
+        <div class="p1">
+          <h3>Out GitHub Respostitory</h3>
+          <p>
+            All of the code of this website your seeing here is all on our
+            Github! For re-using purposes please contact SS-Developers for info.
+          </p>
+          <a href="https://github.com/SS-Developers/">
+            <button class="btn">Go Now &rarr;</button>
+          </a>
+        </div>
+      </div>
+      <div class="learn-more__even">
+        <div class="p2">
+          <h3>MPL 2.0 License</h3>
+          <p>
+            This portal and All of our project are protected under Mozilla
+            Public License 2.0
+          </p>
+          <a href="./src/data/LICENSE.txt"
+            ><button class="dark-btn btn">Go To Lisense &rarr;</button></a
+          >
+        </div>
+        <div class="big2">
+          <img class="learnmore-img" src="./src/img/mozi.png" alt="" />
+        </div>
       </div>
     </section>
-
-    <footer>
+    <footer class="dark-footer">
       <h3>MPL2.0 Lisence &copy;2021 Prawich & Jirat</h3>
       <ul>
         <a href="https://ssdevelopers.xyz"><li>Portals</li></a>
@@ -51,5 +69,4 @@
       </ul>
     </footer>
   </body>
-  <script src="./src/script/app.js"></script>
 </html>

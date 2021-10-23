@@ -37,9 +37,10 @@ body {
   padding: 4rem 3rem 3rem 5rem;
   background-color: #404040;
 }
-.learn-more__even img {
+.learn-more__even .learnmore-img {
   border-radius: 1.1rem;
   width: 100%;
+  margin: auto;
 }
 .learn-more__even .big2 {
   grid-area: big2;
@@ -66,6 +67,13 @@ body {
   padding-top: 3rem;
   grid-area: p1;
 }
+.learn-more__dev {
+  text-align: center;
+}
+.learn-more__dev h4 {
+  font-size: 2rem;
+  margin: 1rem;
+}
 
 .btn {
   color: #fff;
@@ -81,9 +89,11 @@ body {
 .btn:hover {
   color: #272727;
   background-color: #fff;
+  box-shadow: rgba(255, 255, 255, 0.5) 0rem 0rem 3rem;
   transform: scale(1.05);
 }
 .btn:active {
+  box-shadow: rgba(0, 0, 0, 0.5) 0rem 0rem 3rem;
   transform: scale(0.9);
 }
 
@@ -259,6 +269,16 @@ footer a:hover {
 
 .dark-footer {
   background-color: #202020;
+}
+
+.dev-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.dev-img {
+  width: 60%;
+  border-radius: 1.1rem;
 }
 
 .pdf-embedded {
