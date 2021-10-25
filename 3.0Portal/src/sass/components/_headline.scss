@@ -1,0 +1,22 @@
+.headline {
+  &__system13 {
+    background-image: url(../img/sys13.png);
+    background-size: cover;
+    padding: 3rem;
+    position: relative;
+
+    &--btn {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+    }
+
+    h3 {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}

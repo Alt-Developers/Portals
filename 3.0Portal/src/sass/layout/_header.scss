@@ -8,17 +8,19 @@
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 2fr 1fr;
-    grid-template-areas: "main menu"
-    "main blank";
+    grid-template-areas:
+      "main menu"
+      "main blank";
 
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   &__main {
     grid-area: main;
 
     padding: 2rem 2rem 2rem 4rem;
-    background-image: linear-gradient(218deg, rgba(255,129,78,1) 0%, rgba(226,29,255,1) 100%);
+    // background-image: linear-gradient(218deg, rgba(255,129,78,1) 0%, rgba(226,29,255,1) 100%);
+    transition: all 1s;
   }
 
   &__menu {
@@ -38,25 +40,23 @@
 
     &--1 {
       grid-area: a1;
-      transition: all .3s;
+      transition: all 0.3s;
       height: 100%;
     }
     &--2 {
       grid-area: a2;
-      transition: all .3s;
+      transition: all 0.3s;
       height: 100%;
     }
     &--3 {
       grid-area: a3;
-      transition: all .3s;
+      transition: all 0.3s;
       height: 100%;
     }
     &--4 {
       grid-area: a4;
-      transition: all .3s;
+      transition: all 0.3s;
       height: 100%;
     }
   }
-
-
 }
