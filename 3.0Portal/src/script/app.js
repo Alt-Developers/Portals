@@ -1,39 +1,39 @@
-// DOM Selection
+// // DOM Selection
 
-const heroTextAbstract = document.querySelector(".abstract__text");
-const heroAbstract = document.querySelector(".header__main");
+// const heroTextAbstract = document.querySelector(".abstract__text");
+// const heroAbstract = document.querySelector(".header__main");
 
-// Variables
+// // Variables
 
-const abstractsImg = [
-  "./src/img/vrvalo.png",
-  "./src/img/devnews.png",
-  "./src/img/sys13.png",
-];
+// const abstractsImg = [
+//   "./src/img/vrvalo.png",
+//   "./src/img/devnews.png",
+//   "./src/img/sys13.png",
+// ];
 
-let count = 0;
+// let count = 0;
 
-// Functions
+// // Functions
 
-const changeImg = function (imgPath) {
-  setTimeout(() => {
-    heroAbstract.style.opacity = "0";
-  }, 1000);
-  setTimeout(() => {
-    heroAbstract.style.backgroundImage = `url(${imgPath})`;
-  }, 2000);
-  setTimeout(() => {
-    heroAbstract.style.opacity = "100";
-  }, 3000);
-  console.log(`Change Image`);
-  count++;
-};
+// const changeImg = function (imgPath) {
+//   setTimeout(() => {
+//     heroAbstract.style.opacity = "0";
+//   }, 1000);
+//   setTimeout(() => {
+//     heroAbstract.style.backgroundImage = `url(${imgPath})`;
+//   }, 2000);
+//   setTimeout(() => {
+//     heroAbstract.style.opacity = "100";
+//   }, 3000);
+//   console.log(`Change Image`);
+//   count++;
+// };
 
-// Event Handler
+// // Event Handler
 
-changeImg(abstractsImg[count]);
+// changeImg(abstractsImg[count]);
 
-setInterval(() => {
-  count === abstractsImg.length ? (count = 0) : (count = count);
-  changeImg(abstractsImg[count]);
-}, 10000);
+// setInterval(() => {
+//   count === abstractsImg.length ? (count = 0) : (count = count);
+//   changeImg(abstractsImg[count]);
+// }, 10000);

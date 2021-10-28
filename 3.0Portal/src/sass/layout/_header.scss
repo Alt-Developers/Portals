@@ -6,7 +6,7 @@
     border-radius: 1.1rem;
 
     display: grid;
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 2fr 1fr;
     grid-template-areas:
       "main menu"
@@ -19,7 +19,7 @@
     grid-area: main;
 
     padding: 2rem 2rem 2rem 4rem;
-    // background-image: linear-gradient(218deg, rgba(255,129,78,1) 0%, rgba(226,29,255,1) 100%);
+    background-image: linear-gradient(218deg, rgba(255,129,78,1) 0%, rgba(226,29,255,1) 100%);
     transition: all 1s;
   }
 
@@ -27,6 +27,13 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
     grid-template-areas: "a1" "a2" "a3" "a4";
+    transition: all .2s;
+    background-color: $gray-light-1;
+    height: 65rem;
+
+    &:hover {
+      transform: translateX(-5rem);
+    }
 
     & > * {
       list-style: none;
@@ -42,21 +49,29 @@
       grid-area: a1;
       transition: all 0.3s;
       height: 100%;
+
+      @include JellyEffect;
     }
     &--2 {
       grid-area: a2;
       transition: all 0.3s;
       height: 100%;
+
+      @include JellyEffect;
     }
     &--3 {
       grid-area: a3;
       transition: all 0.3s;
       height: 100%;
+
+      @include JellyEffect;
     }
     &--4 {
       grid-area: a4;
       transition: all 0.3s;
       height: 100%;
+
+      @include JellyEffect;
     }
   }
 }
