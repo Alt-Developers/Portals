@@ -11,6 +11,18 @@
   // border: $blinding-white solid 0.3rem;
   // transition: 0.5s;
 
+  @include respond(phone) {
+    color: $blinding-white;
+    text-decoration: none;
+    background-color: $gray-light-1;
+    border: none;
+    width: 10rem;
+    height: 5.1rem;
+    border-radius: 1.1rem;
+    transition: all 0.4s;
+    margin-left: 1rem;
+  }
+
   &:hover {
     color: $paragrph-text-1;
     background-color: $blinding-white;

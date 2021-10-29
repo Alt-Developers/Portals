@@ -10,6 +10,9 @@
       height: 100%;
       width: 100%;
       transition: all 0.4s;
+      object-fit: cover;
+
+      // Blur here!
     }
   }
 
@@ -23,6 +26,15 @@
     background-color: $gray-dark-1;
     padding: 3rem;
     border-radius: 15px;
+
+    @include respond(phone) {
+      position: absolute;
+      top: 85vh;
+      left: 13vw;
+      opacity: 1;
+      transform: translateX(-2rem) scale(1);
+      width: 80vw;
+    }
 
     &:hover {
       opacity: 1;
@@ -38,9 +50,16 @@
     h3 {
       font-size: 5rem;
       margin-bottom: 2rem;
+
+      @include respond(phone) {
+        font-size: 3rem;
+      }
     }
     p {
       font-size: 2rem;
+      @include respond(phone) {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -52,10 +71,6 @@
   &__dev-news:hover + &__dev-text {
     opacity: 1;
     transform: translateX(2rem) scale(1);
-  }
-
-  &__text:hover ~ &__system13 {
-    filter: blur(10px);
   }
 
   // &__news-snippet {
@@ -76,6 +91,7 @@
       height: 100%;
       width: 100%;
       transition: all 0.4s;
+      object-fit: cover;
     }
   }
 
@@ -89,6 +105,15 @@
     background-color: $gray-dark-1;
     padding: 3rem;
     border-radius: 15px;
+
+    @include respond(phone) {
+      position: absolute;
+      top: 160vh;
+      left: 13vw;
+      opacity: 1;
+      transform: translateX(-2rem) scale(1);
+      width: 80vw;
+    }
 
     &:hover {
       opacity: 1;
@@ -104,9 +129,23 @@
     h3 {
       font-size: 5rem;
       margin-bottom: 2rem;
+
+      @include respond(phone) {
+        font-size: 3rem;
+      }
     }
     p {
       font-size: 2rem;
+      @include respond(phone) {
+        font-size: 1.5rem;
+      }
     }
   }
+}
+
+// For Js
+.headline__system13,
+.headline__dev-text {
+  transition: all 0.4s;
+  animation-delay: 1s;
 }
