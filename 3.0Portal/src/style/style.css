@@ -394,6 +394,16 @@ h1 {
   background: linear-gradient(139deg, #0074a5 8%, #ff547b 89%);
   transition: all 1s;
 }
+@media only screen and (max-width: 37.5em) {
+  .header__main {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header__main h1 {
+    font-size: 5rem;
+  }
+}
 .header__menu {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
