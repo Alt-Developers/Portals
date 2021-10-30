@@ -5,11 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "a": "node-sass src/sass/main.scss src/style/style.css -w"
+    "a": "node-sass public/src/sass/main.scss public/src/style/style.cs -w",
+    "start": "nodemon app.js"
   },
-  "author": "Jirat Chutrakul",
+  "author": "Jirat Chutrakul && Prawich Thawansakdivudhi",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }
