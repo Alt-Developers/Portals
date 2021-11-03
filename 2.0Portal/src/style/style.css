@@ -141,49 +141,42 @@ h1 {
   backdrop-filter: blur(3px);
   z-index: 5; }
 
-.header__wrapper {
-  background-color: #404040;
-  margin: 2%;
-  height: 70vh;
-  border-radius: 1.1rem;
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  grid-template-rows: 2fr 1fr;
-  grid-template-areas: "main menu" "main blank";
-  overflow: hidden; }
-
-.header__main {
-  grid-area: main;
-  padding: 2rem 2rem 2rem 4rem;
-  background-image: linear-gradient(218deg, #ff814e 0%, #e21dff 100%); }
-
-.header__menu {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
-  grid-template-areas: "a1" "a2" "a3" "a4"; }
-  .header__menu > * {
-    list-style: none;
-    text-decoration: none;
-    color: #fff;
-    padding: 2.5rem;
-    font-size: 3rem;
-    font-weight: 500; }
-  .header__menu--1 {
-    grid-area: a1;
-    transition: all .3s;
-    height: 100%; }
-  .header__menu--2 {
-    grid-area: a2;
-    transition: all .3s;
-    height: 100%; }
-  .header__menu--3 {
-    grid-area: a3;
-    transition: all .3s;
-    height: 100%; }
-  .header__menu--4 {
-    grid-area: a4;
-    transition: all .3s;
-    height: 100%; }
+.hero {
+  text-align: center;
+  width: 100vw;
+  height: 80vh;
+  background-color: #1b1b1b;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/vw.png");
+  background-size: 100%;
+  background-position-y: 50; }
+  .hero__content {
+    font-size: 5rem;
+    margin: 1.5rem;
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    text-align: left; }
+    .hero__content p {
+      font-size: 2rem;
+      margin-top: 5%;
+      margin-bottom: 5%; }
+    .hero__content button {
+      border-radius: 1.1rem;
+      background-color: #b1333e;
+      font-size: 2rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      font-weight: 400;
+      transition: all 0.2s;
+      border: none; }
+      .hero__content button:hover {
+        background: #fa4454;
+        background: linear-gradient(137deg, #fa4454 0%, #dd56ff 100%);
+        transform: scale(1.1); }
+      .hero__content button:active {
+        background-color: #b1333e;
+        transform: scale(0.9); }
 
 nav {
   width: 100vw;
@@ -425,3 +418,55 @@ footer {
     border-radius: 1.1rem; }
     .p404__wrapper-content--content p {
       font-size: 2rem; }
+
+.github {
+  padding: 2vw;
+  overflow-x: hidden; }
+  .github h1 {
+    font-size: 4vw; }
+  .github p {
+    font-size: 1vw;
+    margin-bottom: 2rem; }
+  .github h2 {
+    font-size: 2vw;
+    margin-bottom: 2rem; }
+  .github__container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    height: 60vh;
+    grid-template-areas: "img text";
+    grid-gap: 2vw;
+    margin-top: 3rem; }
+  .github__img {
+    grid-area: img;
+    height: fit-content;
+    width: 100%;
+    border-radius: 1.1rem; }
+  .github__text {
+    border-radius: 1.1rem;
+    background-color: #272727;
+    padding: 3rem;
+    position: relative; }
+  .github__btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    bottom: 4vh;
+    width: 100%; }
+  .github__btn {
+    color: #fff;
+    text-decoration: none;
+    background-color: #404040;
+    border: none;
+    width: 30rem;
+    height: 5rem;
+    margin-right: 2rem;
+    border-radius: 1.1rem;
+    transition: all 0.4s; }
+    .github__btn:hover {
+      color: #272727;
+      background-color: #fff;
+      transform: scale(1.05); }
+    .github__btn:active {
+      transform: scale(0.9); }

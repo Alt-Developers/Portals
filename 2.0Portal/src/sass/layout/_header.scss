@@ -1,62 +1,116 @@
-.header {
-  &__wrapper {
-    background-color: $gray-light-1;
-    margin: 2%;
-    height: 70vh;
-    border-radius: 1.1rem;
+// .header {
+//   &__wrapper {
+//     background-color: $gray-light-1;
+//     margin: 2%;
+//     height: 70vh;
+//     border-radius: 1.1rem;
 
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas: "main menu"
-    "main blank";
+//     display: grid;
+//     grid-template-columns: 2.5fr 1fr;
+//     grid-template-rows: 2fr 1fr;
+//     grid-template-areas: "main menu"
+//     "main blank";
 
-    overflow: hidden; 
+//     overflow: hidden; 
+//   }
+
+//   &__main {
+//     grid-area: main;
+
+//     padding: 2rem 2rem 2rem 4rem;
+//     background-image: linear-gradient(218deg, rgba(255,129,78,1) 0%, rgba(226,29,255,1) 100%);
+//   }
+
+//   &__menu {
+//     display: grid;
+//     grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+//     grid-template-areas: "a1" "a2" "a3" "a4";
+
+//     & > * {
+//       list-style: none;
+//       text-decoration: none;
+//       color: $blinding-white;
+
+//       padding: 2.5rem;
+//       font-size: 3rem;
+//       font-weight: 500;
+//     }
+
+//     &--1 {
+//       grid-area: a1;
+//       transition: all .3s;
+//       height: 100%;
+//     }
+//     &--2 {
+//       grid-area: a2;
+//       transition: all .3s;
+//       height: 100%;
+//     }
+//     &--3 {
+//       grid-area: a3;
+//       transition: all .3s;
+//       height: 100%;
+//     }
+//     &--4 {
+//       grid-area: a4;
+//       transition: all .3s;
+//       height: 100%;
+//     }
+//   }
+
+
+// }
+
+.hero {
+  text-align: center;
+  // display: flex;
+  width: 100vw;
+  height: 80vh;
+  background-color: $gray-dark-3;
+  // justify-content: center;
+  // align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/vw.png");
+  background-size: 100%;
+  background-position-y: 50;
+
+  &__content {
+    font-size: 5rem;
+    margin: 1.5rem;
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    text-align: left;
+
+    p {
+      font-size: 2rem;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    button {
+      border-radius: 1.1rem;
+      background-color: $search-red-1;
+      font-size: 2rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      font-weight: 400;
+      transition: all 0.2s;
+      border: none;
+
+      &:hover {
+        background: rgb(250, 68, 84);
+        background: linear-gradient(
+          137deg,
+          rgba(250, 68, 84, 1) 0%,
+          rgb(221, 86, 255) 100%
+        );
+        transform: scale(1.1);
+      }
+      &:active {
+        background-color: $search-red-1;
+        transform: scale(0.9);
+      }
+    }
   }
-
-  &__main {
-    grid-area: main;
-
-    padding: 2rem 2rem 2rem 4rem;
-    background-image: linear-gradient(218deg, rgba(255,129,78,1) 0%, rgba(226,29,255,1) 100%);
-  }
-
-  &__menu {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
-    grid-template-areas: "a1" "a2" "a3" "a4";
-
-    & > * {
-      list-style: none;
-      text-decoration: none;
-      color: $blinding-white;
-
-      padding: 2.5rem;
-      font-size: 3rem;
-      font-weight: 500;
-    }
-
-    &--1 {
-      grid-area: a1;
-      transition: all .3s;
-      height: 100%;
-    }
-    &--2 {
-      grid-area: a2;
-      transition: all .3s;
-      height: 100%;
-    }
-    &--3 {
-      grid-area: a3;
-      transition: all .3s;
-      height: 100%;
-    }
-    &--4 {
-      grid-area: a4;
-      transition: all .3s;
-      height: 100%;
-    }
-  }
-
-
 }
