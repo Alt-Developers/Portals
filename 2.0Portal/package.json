@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "a": "node-sass src/sass/main.scss src/style/style.css -w"
+    "a": "node-sass src/sass/main.scss src/style/style.css -w",
+    "start": "nodemon app.js"
   },
   "author": "Jirat Chutrakul",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "express": "^4.17.1",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14"
   }
 }
