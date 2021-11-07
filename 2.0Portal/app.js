@@ -1,8 +1,9 @@
 const express = require("express");
-const routes = require("routes");
 
 const app = express();
 
-app.use();
+app.use("/", (req, res, next) => {
+  res.sendFile("");
+});
 
 app.listen(3000);
