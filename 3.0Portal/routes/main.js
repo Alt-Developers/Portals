@@ -6,11 +6,11 @@ const router = express.Router();
 
 router.get("/dev", (req, res, next) => {
   console.log("There's a user requresting portal main page!");
-  res.sendFile(path.join(rootDir, "views", "dev.html"));
+  res.render("dev.html");
 });
 router.get("/docs", (req, res, next) => {
   console.log("There's a user requresting portal main page!");
-  res.sendFile(path.join(rootDir, "views", "docs.html"));
+  res.sendFile("docs.html");
 });
 router.get("/github", (req, res, next) => {
   console.log("There's a user requresting portal main page!");

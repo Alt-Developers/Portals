@@ -7,11 +7,14 @@ const { join } = require("path");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
+
+app.set("view engine", "ejs");
+app.set("views", "views");
 
 app.use(route);
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "views", "404.html"));
+  res.sendFile("404");
 });
 
 app.listen(3000);
