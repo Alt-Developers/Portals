@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/dev", (req, res, next) => {
   console.log("There's a user requresting portal main page!");
-  res.render("dev.html");
+  res.render("dev");
 });
 router.get("/docs", (req, res, next) => {
   console.log("There's a user requresting portal main page!");
@@ -21,7 +21,7 @@ router.get("/LICENSE", (req, res, next) => {
 });
 router.get("/", (req, res, next) => {
   console.log("There's a user requresting portal main page!");
-  res.sendFile(path.join(rootDir, "views", "index.html"));
+  res.render("index");
 });
 
 module.exports = router;
