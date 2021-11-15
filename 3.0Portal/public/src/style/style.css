@@ -296,10 +296,12 @@ h1 {
   transition: all 0.4s;
   animation-delay: 1s; }
 
+.header p {
+  font-size: 3rem; }
 .header__wrapper {
   background-color: #404040;
   margin: 2%;
-  height: 80vh;
+  height: 70vh;
   border-radius: 1.1rem;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -316,7 +318,8 @@ h1 {
 .header__main {
   grid-area: main;
   padding: 2rem 2rem 2rem 4rem;
-  background: linear-gradient(139deg, #0074a5 8%, #ff547b 89%);
+  background: red;
+  background: linear-gradient(143deg, red 0%, #3aceff 100%);
   transition: all 1s; }
   @media only screen and (max-width: 37.5em) {
     .header__main {
@@ -392,6 +395,13 @@ nav {
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 100%;
   grid-template-areas: "logo a1 a2 a3 a4"; }
+  @media only screen and (max-width: 37.5em) {
+    nav {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      grid-template-columns: none; } }
   nav .logo {
     display: flex;
     align-items: center; }
@@ -412,6 +422,9 @@ nav {
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 0.6rem; }
+    @media only screen and (max-width: 37.5em) {
+      nav li {
+        display: none; } }
   nav a {
     height: 100%;
     background-color: #202020;
@@ -419,11 +432,20 @@ nav {
     margin: 0.5rem;
     text-decoration: none;
     grid-area: auto; }
+    @media only screen and (max-width: 37.5em) {
+      nav a {
+        display: none; } }
     nav a :hover {
       background-color: #fa4454; }
+      @media only screen and (max-width: 37.5em) {
+        nav a :hover {
+          display: none; } }
   nav .active {
     background-color: #b1333e;
     border-radius: 0.6rem; }
+    @media only screen and (max-width: 37.5em) {
+      nav .active {
+        display: none; } }
 
 .nav__1 {
   grid-area: a1; }

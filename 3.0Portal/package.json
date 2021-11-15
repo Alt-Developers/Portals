@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "a": "node-sass public/src/sass/main.scss public/src/style/style.cs -w",
+    "a": "sass --watch public/src/sass/main.scss:public/src/style/style.css",
     "start": "nodemon app.js"
   },
   "author": "Jirat Chutrakul && Prawich Thawansakdivudhi",
