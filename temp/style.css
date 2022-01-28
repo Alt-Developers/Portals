@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+  font-family: "ubuntu";
+  width: 100%;
+  height: 100%;
+  padding: none;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #313131, #dc3d4b);
+  /* padding: 0 2rem 2rem 4rem; */
+  overflow: hidden;
+  padding: none;
+  padding: 2rem;
+}
+
+.modal {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  grid-template-areas: "content logo";
+  background-color: #202020;
+  border-radius: 1.1rem;
+  padding: 2rem 2rem 2rem 4rem;
+}
+.content {
+  grid-area: "content";
+}
+
+.logo {
+  grid-area: "logo";
+
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: 6rem;
+  color: white;
+  line-height: 3rem;
+}
+
+p {
+  font-size: 3rem;
+  color: white;
+}
