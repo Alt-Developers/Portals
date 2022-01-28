@@ -44,14 +44,14 @@ $ npm start
 
 > then the server will be started at port `3000`
 >
-> you can change this by before you start the server go to ./app.js and change this
+> If the 3000 port colides with another port you can change by:
 >
 > ```
 >  | app.listen(3000)
 >  |            ^^^^ change this to your preferred port
 > ```
 >
-> then start ther server after this the server will run at your selected port.
+> Now the local server will run at your preferred port.
 
 ## Copyrights
 
