@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  font-family: "Ubuntu", "Noto Sans Thai", sans-serif;
+  color: var(--font-color);
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+// ::selection {
+//   background-color: #fd525260;
+//   color: #fff;
+// }
