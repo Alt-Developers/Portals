@@ -45,10 +45,9 @@ const Header = (props) => {
       >
         <img src="/icons/portal.png" alt="portals logo" />
         <div className="nav__links">
-          <a href="#">Who we are</a>
-          <a href="#">About Us</a>
-          <a href="#">Testimonials</a>
-          <a href="#">Github</a>
+          <a href="#intro">Introductions</a>
+          <a href="#projects">Projects</a>
+          <a href="https://github.com/SS-Developers">Github</a>
         </div>
       </nav>
       <i

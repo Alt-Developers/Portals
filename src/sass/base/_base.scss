@@ -23,6 +23,15 @@ body {
   }
 }
 
+.separator {
+  margin: 4rem 0;
+  border: 0.5px solid var(--gray-light-3);
+}
+
+main {
+  padding: 4rem 7rem 3rem 10rem;
+}
+
 // ::selection {
 //   background-color: #fd525260;
 //   color: #fff;
