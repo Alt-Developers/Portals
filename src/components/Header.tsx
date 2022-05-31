@@ -16,6 +16,12 @@ const Header = (props) => {
         first: "/icons/Timetables2.png",
         second: "/icons/Timetables1.png",
       },
+      links: [
+        {
+          text: "Check out Timetables",
+          href: "https://timetables.ssdevelopers.xyz/",
+        },
+      ],
     },
     {
       background: "#708DF2",
@@ -31,10 +37,24 @@ const Header = (props) => {
     // },
   ];
 
+  const pageControler = (event) => {
+    if (event.code === "ArrowRight" && page + 1 < pageContent.length) {
+      setPage(page + 1);
+      setIncrementOrDecrement("increment");
+    }
+
+    if (event.code === "ArrowLeft" && page - 1 >= 0) {
+      setPage(page - 1);
+      setIncrementOrDecrement("decrement");
+    }
+  };
+
   return (
     <section
       className="header"
       style={{ background: pageContent[page]["background"] }}
+      onKeyDown={(event) => pageControler(event)}
+      tabIndex={0}
     >
       <nav
         className={`nav ${
@@ -91,6 +111,14 @@ const Header = (props) => {
       >
         <p>{pageContent[page]["subheader"]}</p>
         <h1>{pageContent[page]["header"]}</h1>
+        <div className="header__text--links">
+          {pageContent[page]["links"]?.map((link) => (
+            <a href={link.href}>
+              <i className="bx bxs-chevrons-right"></i>
+              {link.text}
+            </a>
+          ))}
+        </div>
       </motion.div>
       <div className="header__imageGroup">
         {pageContent[page]["doubleImage"] && (

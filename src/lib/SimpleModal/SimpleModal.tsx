@@ -5,12 +5,44 @@ import { modalActions } from "../../context/modalSlice";
 import { RootState } from "../../context/store";
 import "./SimpleModal.css";
 
-const SimpleModal: React.FC<{}> = props => {
+const SimpleModal: React.FC<{}> = (props) => {
   const modalState = useSelector((state: RootState) => state.modal);
   const dispatch = useDispatch();
 
   return (
     <>
+      <div
+        className="simpleModal__permOverlay"
+        style={{
+          backgroundColor: "#ffffff30",
+          position: "fixed",
+          height: "100vh",
+          width: "100vw",
+          top: 0,
+          left: 0,
+          backdropFilter: "blur(3rem)",
+          zIndex: 100,
+          display: "none",
+          placeItems: "center",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: "2rem",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <i
+            style={{ fontSize: "20rem", color: "#ffffff90" }}
+            className="bx bxs-devices"
+          ></i>
+          <p style={{ color: "#ffffff90", width: "70%", textAlign: "center" }}>
+            This site's mobile version is still under development
+          </p>
+        </div>
+      </div>
       <motion.div
         className="simpleModal__children"
         animate={
@@ -19,9 +51,11 @@ const SimpleModal: React.FC<{}> = props => {
         style={{
           position: "relative",
           width: "100",
-        }}>
+        }}
+      >
         {props.children}
       </motion.div>
+
       <div
         className="simpleModal__overlay"
         style={
@@ -42,7 +76,8 @@ const SimpleModal: React.FC<{}> = props => {
                   }
                 : { opacity: 0, y: -200 }
             }
-            transition={{ type: "ease", duration: ".15" }}>
+            transition={{ type: "ease", duration: ".15" }}
+          >
             <h1 className="simpleModal__header">
               {modalState.type.code === "IMPORTANT" && (
                 <span
@@ -52,7 +87,8 @@ const SimpleModal: React.FC<{}> = props => {
                     borderRadius: "1.1rem",
                     fontSize: "2rem",
                     marginRight: "1rem",
-                  }}>
+                  }}
+                >
                   IMPORTANT
                 </span>
               )}
@@ -65,7 +101,8 @@ const SimpleModal: React.FC<{}> = props => {
                   : ""
               }`}
               disabled={modalState.type.code === "IMPORTANT"}
-              onClick={() => dispatch(modalActions.closeModal())}>
+              onClick={() => dispatch(modalActions.closeModal())}
+            >
               <i className="bx bx-window-close"></i>
             </button>
             <div className="simpleModal__content">

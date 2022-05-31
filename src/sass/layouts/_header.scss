@@ -10,11 +10,19 @@
   // transition: all 0.2s;
 
   &__text {
+    width: 40vw;
     position: absolute;
     left: 10rem;
     bottom: 50%;
     // transform: translateY(50%);
     color: #fff;
+
+    &--links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
 
     p {
       font-size: 2rem;
@@ -22,11 +30,46 @@
 
     h1 {
       font-size: 6rem;
-      width: 40vw;
 
       @include respond(big-desktop) {
         width: 35vw;
         font-size: 7rem;
+      }
+    }
+
+    a {
+      color: #fff;
+      font-size: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      border-radius: 0.5rem;
+      width: fit-content;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      &:hover {
+        background-color: var(#ffffff);
+      }
+
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
   }
@@ -44,8 +87,8 @@
     bottom: 50%;
     transform: translateY(50%);
     right: 10vw;
-    height: 50rem;
-    width: 80rem;
+    height: 65%;
+    width: 45%;
 
     @include respond(tab-land) {
       height: 50%;

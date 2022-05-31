@@ -1,7 +1,7 @@
 const Intro = () => {
   return (
     <section className="intro" id="intro">
-      <h3>Introduction</h3>
+      <h3>Meet our Developers</h3>
 
       <p>
         SS Developers is a duo developer group developing web-applications and

@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
 import Header from "./components/Header";
-import Intro from "./components/Intro";
 
 function App() {
   const dispatch = useDispatch();
@@ -9,43 +8,39 @@ function App() {
     <>
       <Header />
       <main>
-        <Intro />
-
-        <hr className="separator" />
-
-        <section className="projects" id="projects">
-          <h3>Projects</h3>
-          <div className="projects__list">
-            <div className="projects__item">
-              <div className="projects__image">
-                {/* <img src="/icons/Timetables1.png" alt="" /> */}
-                <img src="/icons/Timetables2.png" alt="" />
-              </div>
-
-              <div className="projects__content">
-                <h4>
-                  Timetables <span>Featured Project</span>
-                </h4>
-                <p>
-                  School timetable web-app for a Simple, Customizable and
-                  Practical experience.
-                </p>
-              </div>
+        <section className="blocks">
+          <div className="timetablesBlock">
+            <div className="timetablesBlock__text">
+              <h1>Timetables</h1>
+              <p>
+                Timetables is a web-based timetables program for a Simple,
+                Customizable and Practical experience.
+              </p>
             </div>
-
-            <div className="projects__item">
-              <div className="projects__image">
-                <img src="/icons/Authentication.PNG" alt="" />
-              </div>
-
-              <div className="projects__content">
-                <h4>Central Authentication</h4>
-                <p>Central Authentication system for SS Developer products</p>
-              </div>
+            <object data="/icons/timetables.svg"> </object>
+            <div className="timetablesBlock__buttons">
+              <button style={{ width: "20rem" }}>Let's go!</button>
+              <button>
+                <i className="bx bxl-github"></i>
+              </button>
             </div>
           </div>
+
+          <div className="prideBlock">
+            <h1>
+              Pride <br />
+              Month <br />
+              2022
+            </h1>
+            <p>Receive the Pride 2022 Theme for SS Developer products</p>
+
+            <button>Receive</button>
+          </div>
+
+          <div className="githubBlock">
+            <h1>Every line of code is Open Sourced</h1>
+          </div>
         </section>
-        <div className="separator"></div>
       </main>
     </>
   );
