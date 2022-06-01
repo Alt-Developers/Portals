@@ -6,6 +6,10 @@
     "timetables timetables"
     "pride github";
   gap: 2rem;
+
+  @include respond(phone) {
+    grid-template-rows: 40vh 40vh;
+  }
 }
 
 .timetablesBlock {
@@ -21,9 +25,24 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 85%;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+    width: 65%;
+    // width: 70%;
+    // width: 50%;
+    box-shadow: 0 0 4.8rem rgba(0, 0, 0, 0.2);
     border-radius: 1.1rem 0rem 0rem 0rem;
+
+    @include respond(phone) {
+      right: 50% !important;
+      transform: translateX(50%);
+      width: 90% !important;
+      // height: 30% !important;
+      // bottom: 10rem !important;
+    }
+
+    @include respond(tab-land) {
+      right: -10%;
+      width: 75%;
+    }
   }
 
   &__text {
@@ -31,6 +50,10 @@
     display: flex;
     gap: 1rem;
     flex-direction: column;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     h1 {
       font-size: 5rem;
@@ -51,20 +74,17 @@
 
     button {
       font-family: "Ubuntu";
-      padding: 2rem;
-      border: none;
+      background: rgb(241, 241, 241);
       border-radius: 1.1rem;
-      background-color: #fff;
       font-size: 1.7rem;
-      font-weight: 600;
-      // box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
-      //   border: solid 0.1rem var(--gray-dark-1);
+      border: none;
+      padding: 2rem;
       transition: all 0.2s;
+      box-shadow: 0 0 4.8rem #00000010;
 
       &:hover {
+        background-color: #fff;
         transform: scale(1.075);
-        // border: ;
-        box-shadow: 0 0 2rem #fff;
       }
 
       &:active {
@@ -78,17 +98,19 @@
   grid-area: pride;
   padding: 3rem;
   border: 1px solid var(--gray-dark-1);
-  background: rgb(255, 151, 150);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 151, 150, 1) 0%,
-    rgba(255, 200, 99, 1) 16%,
-    rgba(245, 255, 94, 1) 37%,
-    rgba(185, 252, 157, 1) 51%,
-    rgba(165, 233, 252, 1) 70%,
-    rgba(195, 154, 255, 1) 100%
-  );
-  object-fit: cover;
+  background: url("/icons/rainbow.jpg");
+  background-size: cover;
+  // -webkit-background-clip: text;
+
+  // background: linear-gradient(
+  //   135deg,
+  //   rgba(255, 151, 150, 1) 0%,
+  //   rgba(255, 200, 99, 1) 16%,
+  //   rgba(245, 255, 94, 1) 37%,
+  //   rgba(185, 252, 157, 1) 51%,
+  //   rgba(165, 233, 252, 1) 70%,
+  //   rgba(195, 154, 255, 1) 100%
+  // );
   border-radius: 1.1rem;
 
   h1 {

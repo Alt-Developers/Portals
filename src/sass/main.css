@@ -40,7 +40,8 @@ body {
   background-color: var(--background-color);
   min-height: 100vh;
   font-family: "Ubuntu", "Noto Sans Thai", sans-serif;
-  color: var(--font-color); }
+  color: var(--font-color);
+  overflow: "hidden"; }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -51,6 +52,9 @@ body {
 
 main {
   padding: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    main {
+      padding: 2rem; } }
 
 h1 {
   font-size: 3rem; }
@@ -64,6 +68,9 @@ p {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "timetables timetables" "pride github";
   gap: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .blocks {
+      grid-template-rows: 40vh 40vh; } }
 
 .timetablesBlock {
   background-color: #ededed;
@@ -77,14 +84,26 @@ p {
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 85%;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+    width: 65%;
+    box-shadow: 0 0 4.8rem rgba(0, 0, 0, 0.2);
     border-radius: 1.1rem 0rem 0rem 0rem; }
+    @media only screen and (max-width: 56.25em) {
+      .timetablesBlock object {
+        right: 50% !important;
+        transform: translateX(50%);
+        width: 90% !important; } }
+    @media only screen and (max-width: 75em) {
+      .timetablesBlock object {
+        right: -10%;
+        width: 75%; } }
   .timetablesBlock__text {
     width: 30%;
     display: flex;
     gap: 1rem;
     flex-direction: column; }
+    @media only screen and (max-width: 56.25em) {
+      .timetablesBlock__text {
+        width: 100%; } }
     .timetablesBlock__text h1 {
       font-size: 5rem;
       color: #363636; }
@@ -98,16 +117,16 @@ p {
     gap: 2rem; }
     .timetablesBlock__buttons button {
       font-family: "Ubuntu";
-      padding: 2rem;
-      border: none;
+      background: #f1f1f1;
       border-radius: 1.1rem;
-      background-color: #fff;
       font-size: 1.7rem;
-      font-weight: 600;
-      transition: all 0.2s; }
+      border: none;
+      padding: 2rem;
+      transition: all 0.2s;
+      box-shadow: 0 0 4.8rem #00000010; }
       .timetablesBlock__buttons button:hover {
-        transform: scale(1.075);
-        box-shadow: 0 0 2rem #fff; }
+        background-color: #fff;
+        transform: scale(1.075); }
       .timetablesBlock__buttons button:active {
         transform: scale(0.7); }
 
@@ -115,9 +134,8 @@ p {
   grid-area: pride;
   padding: 3rem;
   border: 1px solid var(--gray-dark-1);
-  background: #ff9796;
-  background: linear-gradient(135deg, #ff9796 0%, #ffc863 16%, #f5ff5e 37%, #b9fc9d 51%, #a5e9fc 70%, #c39aff 100%);
-  object-fit: cover;
+  background: url("/icons/rainbow.jpg");
+  background-size: cover;
   border-radius: 1.1rem; }
   .prideBlock h1 {
     font-size: 8rem;
@@ -142,6 +160,12 @@ p {
     left: 10rem;
     bottom: 50%;
     color: #fff; }
+    @media only screen and (max-width: 56.25em) {
+      .header__text {
+        left: 4rem;
+        top: 5rem;
+        bottom: auto;
+        width: 100vw; } }
     .header__text--links {
       display: flex;
       flex-wrap: wrap;
@@ -150,11 +174,16 @@ p {
     .header__text p {
       font-size: 2rem; }
     .header__text h1 {
-      font-size: 6rem; }
+      font-size: 6rem;
+      width: 90%; }
       @media only screen and (min-width: 112.5em) {
         .header__text h1 {
           width: 35vw;
           font-size: 7rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .header__text h1 {
+          font-size: 5rem;
+          width: 100%; } }
     .header__text a {
       color: #fff;
       font-size: 2rem;
@@ -167,6 +196,9 @@ p {
       border-radius: 0.5rem;
       width: fit-content;
       position: relative; }
+      .header__text a i::after {
+        transform: scaleX(1);
+        transform-origin: bottom left; }
       .header__text a:after {
         content: "";
         position: absolute;
@@ -198,6 +230,11 @@ p {
       .header__imageGroup {
         height: 50%;
         width: 40%; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__imageGroup {
+        bottom: 30%;
+        width: 80%;
+        height: 35% !important; } }
     .header__imageGroup--img1 {
       position: absolute;
       top: 0;
@@ -206,6 +243,9 @@ p {
       z-index: 2;
       transition: all 0.2s;
       color: #fff; }
+      @media only screen and (max-width: 56.25em) {
+        .header__imageGroup--img1 {
+          height: 20vh; } }
       .header__imageGroup--img1:hover {
         z-index: 2;
         outline: 5px solid #ffffff50;
@@ -218,6 +258,9 @@ p {
       height: 23vw;
       transition: all 0.2s;
       color: #fff; }
+      @media only screen and (max-width: 56.25em) {
+        .header__imageGroup--img2 {
+          height: 20vh; } }
       .header__imageGroup--img2:hover {
         z-index: 2;
         outline: 5px solid #ffffff50;
@@ -227,9 +270,9 @@ p {
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 27vw;
       transition: all 0.2s;
-      color: #fff; }
+      color: #fff;
+      width: 45vw; }
       .header__imageGroup--singleImg:hover {
         z-index: 2;
         outline: 5px solid #ffffff50;

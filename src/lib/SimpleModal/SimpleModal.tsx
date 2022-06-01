@@ -8,41 +8,47 @@ import "./SimpleModal.css";
 const SimpleModal: React.FC<{}> = (props) => {
   const modalState = useSelector((state: RootState) => state.modal);
   const dispatch = useDispatch();
+  const permOverlay = false;
 
   return (
     <>
-      <div
-        className="simpleModal__permOverlay"
-        style={{
-          backgroundColor: "#ffffff30",
-          position: "fixed",
-          height: "100vh",
-          width: "100vw",
-          top: 0,
-          left: 0,
-          backdropFilter: "blur(3rem)",
-          zIndex: 100,
-          display: "none",
-          placeItems: "center",
-        }}
-      >
+      {permOverlay && (
         <div
+          className="simpleModal__permOverlay"
           style={{
-            display: "flex",
-            gap: "2rem",
-            flexDirection: "column",
-            alignItems: "center",
+            backgroundColor: "#ffffff30",
+            position: "fixed",
+            height: "100vh",
+            width: "100vw",
+            top: 0,
+            left: 0,
+            backdropFilter: "blur(3rem)",
+            zIndex: 100,
+            display: "none",
+            placeItems: "center",
           }}
         >
-          <i
-            style={{ fontSize: "20rem", color: "#ffffff90" }}
-            className="bx bxs-devices"
-          ></i>
-          <p style={{ color: "#ffffff90", width: "70%", textAlign: "center" }}>
-            This site's mobile version is still under development
-          </p>
+          <div
+            style={{
+              display: "flex",
+              gap: "2rem",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <i
+              style={{ fontSize: "20rem", color: "#ffffff90" }}
+              className="bx bxs-devices"
+            ></i>
+            <p
+              style={{ color: "#ffffff90", width: "70%", textAlign: "center" }}
+            >
+              This site's mobile version is still under development
+            </p>
+          </div>
         </div>
-      </div>
+      )}
+
       <motion.div
         className="simpleModal__children"
         animate={

@@ -113,7 +113,7 @@ const Header = (props) => {
         <h1>{pageContent[page]["header"]}</h1>
         <div className="header__text--links">
           {pageContent[page]["links"]?.map((link) => (
-            <a href={link.href}>
+            <a href={link.href} target="_blank">
               <i className="bx bxs-chevrons-right"></i>
               {link.text}
             </a>

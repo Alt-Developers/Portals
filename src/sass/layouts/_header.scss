@@ -17,6 +17,13 @@
     // transform: translateY(50%);
     color: #fff;
 
+    @include respond(phone) {
+      left: 4rem;
+      top: 5rem;
+      bottom: auto;
+      width: 100vw;
+    }
+
     &--links {
       display: flex;
       flex-wrap: wrap;
@@ -30,10 +37,16 @@
 
     h1 {
       font-size: 6rem;
+      width: 90%;
 
       @include respond(big-desktop) {
         width: 35vw;
         font-size: 7rem;
+      }
+
+      @include respond(phone) {
+        font-size: 5rem;
+        width: 100%;
       }
     }
 
@@ -49,6 +62,13 @@
       border-radius: 0.5rem;
       width: fit-content;
       position: relative;
+
+      i {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
 
       &:after {
         content: "";
@@ -77,6 +97,10 @@
   i {
     transition: all 0.2s;
 
+    // @include respond(phone) {
+    //   display: none;
+    // }
+
     &:active {
       font-size: 2rem;
     }
@@ -93,6 +117,12 @@
     @include respond(tab-land) {
       height: 50%;
       width: 40%;
+    }
+
+    @include respond(phone) {
+      bottom: 30%;
+      width: 80%;
+      height: 35% !important;
     }
 
     // &--img1:hover ~ &--img2 {
@@ -112,6 +142,10 @@
       transition: all 0.2s;
       color: #fff;
 
+      @include respond(phone) {
+        height: 20vh;
+      }
+
       &:hover {
         z-index: 2;
         outline: 5px solid #ffffff50;
@@ -128,6 +162,10 @@
       transition: all 0.2s;
       color: #fff;
 
+      @include respond(phone) {
+        height: 20vh;
+      }
+
       &:hover {
         z-index: 2;
         outline: 5px solid #ffffff50;
@@ -140,9 +178,9 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 27vw;
       transition: all 0.2s;
       color: #fff;
+      width: 45vw;
 
       &:hover {
         z-index: 2;

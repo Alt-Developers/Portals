@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   font-family: "Ubuntu", "Noto Sans Thai", sans-serif;
   color: var(--font-color);
-
+  overflow: "hidden";
   @include respond(tab-port) {
     padding: 0;
   }
@@ -38,6 +38,10 @@ body {
 
 main {
   padding: 4rem;
+
+  @include respond(phone) {
+    padding: 2rem;
+  }
 }
 
 // ::selection {
