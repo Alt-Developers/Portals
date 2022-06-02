@@ -19,7 +19,7 @@
 
     @include respond(phone) {
       left: 4rem;
-      top: 5rem;
+      top: 4rem;
       bottom: auto;
       width: 100vw;
     }
@@ -203,6 +203,10 @@
     font-size: 4rem;
     transform: translateY(50%);
     color: #ffffff;
+
+    @include respond(phone) {
+      bottom: 55%;
+    }
   }
 
   &__rightIcon {
@@ -212,6 +216,10 @@
     font-size: 4rem;
     transform: translateY(50%);
     color: #ffffff;
+
+    @include respond(phone) {
+      bottom: 55%;
+    }
   }
 
   &__inactiveIcon {

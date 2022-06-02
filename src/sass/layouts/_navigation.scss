@@ -5,16 +5,37 @@
   justify-content: space-between;
   border-radius: 1.1rem;
 
+  @include respond(phone) {
+    padding: 0rem;
+  }
+
   img {
     height: 4rem;
   }
 
   &__blurred {
-    padding: 2rem;
-    margin: -1rem;
-    background-color: #00000030;
-    backdrop-filter: blur(1.1rem);
-    border: 1px solid #45454570;
+    // padding: 2rem;
+    // margin: -1rem;
+    // background-color: #00000030;
+    // backdrop-filter: blur(1.1rem);
+    // border: 1px solid #45454570;
+  }
+
+  i {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-size: 4rem;
+    text-decoration: none;
+    position: relative;
+    margin-left: auto;
+    border-radius: 1.1rem;
+    transition: all 0.2s;
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 
   &__links {
@@ -31,6 +52,10 @@
       padding: 1rem;
       border-radius: 1.1rem;
       transition: all 0.2s;
+
+      @include respond(phone) {
+        display: none;
+      }
 
       &:hover {
         background-color: #ffffff30;

@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <main>
         <section className="blocks">
-          <div className="timetablesBlock">
+          <div className="timetablesBlock block">
             <div className="timetablesBlock__text">
               <h1>Timetables</h1>
               <p>
@@ -19,29 +20,40 @@ function App() {
             </div>
             <object data="/icons/timetables.svg"> </object>
             <div className="timetablesBlock__buttons">
-              <button style={{ width: "20rem" }}>Let's go!</button>
+              <a
+                className="u-remove-a-eff"
+                href="https://timetables.ssdevelopers.xyz"
+                style={{ width: "20rem" }}
+              >
+                Let's go!
+              </a>
               <button>
                 <i className="bx bxl-github"></i>
               </button>
             </div>
           </div>
 
-          <div className="prideBlock">
+          <div className="prideBlock block">
             <h1>
               Pride <br />
               Month <br />
               2022
             </h1>
-            <p>Receive the Pride 2022 Theme for SS Developer products</p>
+            <div className="prideBlock__bottom">
+              <p>Claim the Pride 2022 Theme for SS Developer products</p>
 
-            <button>Receive</button>
+              <button>Receive</button>
+            </div>
           </div>
 
-          <div className="githubBlock">
-            <h1>Every line of code is Open Sourced</h1>
+          <div className="githubBlock block">
+            <h1>
+              <span>Our projects are</span> Open Sourced
+            </h1>
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

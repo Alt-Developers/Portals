@@ -62,6 +62,10 @@ h1 {
 p {
   font-size: 1.5rem; }
 
+.u-remove-a-eff {
+  text-decoration: none;
+  color: #000; }
+
 .blocks {
   display: grid;
   grid-template-rows: 60vh 50vh;
@@ -70,13 +74,17 @@ p {
   gap: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .blocks {
-      grid-template-rows: 40vh 40vh; } }
+      grid-template-rows: 40vh 40vh 40vh;
+      grid-template-columns: 100%;
+      grid-template-areas: "timetables" "pride" "github"; } }
+
+.block {
+  border: 1px solid var(--gray-dark-1);
+  border-radius: 1.1rem;
+  padding: 3rem; }
 
 .timetablesBlock {
   background-color: #ededed;
-  border: 1px solid var(--gray-dark-1);
-  border-radius: 1.1rem;
-  padding: 3rem;
   position: relative;
   overflow: hidden;
   grid-area: timetables; }
@@ -115,7 +123,10 @@ p {
     left: 3.5rem;
     display: flex;
     gap: 2rem; }
-    .timetablesBlock__buttons button {
+    .timetablesBlock__buttons button,
+    .timetablesBlock__buttons a {
+      display: grid;
+      place-items: center;
       font-family: "Ubuntu";
       background: #f1f1f1;
       border-radius: 1.1rem;
@@ -124,26 +135,73 @@ p {
       padding: 2rem;
       transition: all 0.2s;
       box-shadow: 0 0 4.8rem #00000010; }
-      .timetablesBlock__buttons button:hover {
+      .timetablesBlock__buttons button:hover,
+      .timetablesBlock__buttons a:hover {
         background-color: #fff;
         transform: scale(1.075); }
-      .timetablesBlock__buttons button:active {
+      .timetablesBlock__buttons button:active,
+      .timetablesBlock__buttons a:active {
         transform: scale(0.7); }
 
 .prideBlock {
   grid-area: pride;
-  padding: 3rem;
-  border: 1px solid var(--gray-dark-1);
   background: url("/icons/rainbow.jpg");
   background-size: cover;
-  border-radius: 1.1rem; }
+  position: relative;
+  display: flex;
+  flex-direction: column; }
   .prideBlock h1 {
     font-size: 8rem;
     color: #fff;
     text-shadow: 0 0 1rem #f2f2f2; }
+    @media only screen and (max-width: 56.25em) {
+      .prideBlock h1 {
+        font-size: 7rem; } }
+  .prideBlock__bottom {
+    margin-top: auto;
+    width: 100%;
+    gap: 2rem;
+    height: fit-content;
+    border-radius: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .prideBlock__bottom p {
+      padding: 2rem;
+      border-radius: 1.1rem;
+      background-color: #f1f1f1;
+      border: 1px solid var(--gray-dark-1);
+      backdrop-filter: blur(1.1rem);
+      color: #000; }
+      @media only screen and (max-width: 56.25em) {
+        .prideBlock__bottom p {
+          font-size: 1.3rem; } }
+    .prideBlock__bottom button {
+      font-family: "Ubuntu";
+      background: #f1f1f1;
+      border-radius: 1.1rem;
+      font-size: 1.7rem;
+      border: none;
+      padding: 2rem;
+      transition: all 0.2s;
+      box-shadow: 0 0 4.8rem #00000010; }
+      .prideBlock__bottom button:hover {
+        background-color: #fff;
+        transform: scale(1.075); }
+      .prideBlock__bottom button:active {
+        transform: scale(0.7); }
 
 .githubBlock {
-  grid-area: github; }
+  grid-area: github;
+  background-color: #363636;
+  color: #fff; }
+  .githubBlock h1 {
+    font-size: 6rem;
+    display: flex;
+    flex-direction: column; }
+    .githubBlock h1 span {
+      font-weight: 500;
+      font-size: 2rem; }
 
 .header {
   height: 85vh;
@@ -163,7 +221,7 @@ p {
     @media only screen and (max-width: 56.25em) {
       .header__text {
         left: 4rem;
-        top: 5rem;
+        top: 4rem;
         bottom: auto;
         width: 100vw; } }
     .header__text--links {
@@ -288,6 +346,9 @@ p {
     font-size: 4rem;
     transform: translateY(50%);
     color: #ffffff; }
+    @media only screen and (max-width: 56.25em) {
+      .header__leftIcon {
+        bottom: 55%; } }
   .header__rightIcon {
     position: absolute;
     bottom: 50%;
@@ -295,6 +356,9 @@ p {
     font-size: 4rem;
     transform: translateY(50%);
     color: #ffffff; }
+    @media only screen and (max-width: 56.25em) {
+      .header__rightIcon {
+        bottom: 55%; } }
   .header__inactiveIcon {
     color: #ffffff70; }
 
@@ -304,14 +368,25 @@ p {
   padding: 1rem;
   justify-content: space-between;
   border-radius: 1.1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .nav {
+      padding: 0rem; } }
   .nav img {
     height: 4rem; }
-  .nav__blurred {
-    padding: 2rem;
-    margin: -1rem;
-    background-color: #00000030;
-    backdrop-filter: blur(1.1rem);
-    border: 1px solid #45454570; }
+  .nav i {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-size: 4rem;
+    text-decoration: none;
+    position: relative;
+    margin-left: auto;
+    border-radius: 1.1rem;
+    transition: all 0.2s;
+    display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .nav i {
+        display: block; } }
   .nav__links {
     display: flex;
     gap: 2rem;
@@ -325,5 +400,35 @@ p {
       padding: 1rem;
       border-radius: 1.1rem;
       transition: all 0.2s; }
+      @media only screen and (max-width: 56.25em) {
+        .nav__links a {
+          display: none; } }
       .nav__links a:hover {
         background-color: #ffffff30; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem 2rem 5rem;
+  font-size: 1.3rem;
+  width: 100%;
+  background-color: var(--gray-light-2);
+  z-index: 1000; }
+  footer li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 5rem;
+    color: var(--font-color);
+    transition: all 0.2s; }
+    @media only screen and (max-width: 56.25em) {
+      footer li {
+        margin-bottom: 1rem; } }
+  footer a:hover > li {
+    text-decoration: underline; }
+  footer a {
+    color: var(--font-color);
+    text-decoration: none;
+    transition: color 0.5s;
+    transition: all 0.2s; }
+  footer h3 {
+    color: var(--font-color); }

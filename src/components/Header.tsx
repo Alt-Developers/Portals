@@ -23,12 +23,13 @@ const Header = (props) => {
         },
       ],
     },
-    {
-      background: "#708DF2",
-      subheader: "Azalea Design System",
-      header: "The design behind our products.",
-      singleImage: "/icons/azalea.png",
-    },
+    // {
+    //   background: `url("/icons/rainbow.jpg")`,
+    //   subheader: "Celebrating",
+    //   header: "Pride Month 2022",
+    //   singleImage:
+    //     "https://www.gaypride.fr/wp-content/uploads/2022/01/pride-2022.jpg",
+    // },
     // {
     //   background: "#708DF2",
     //   subheader: "Todos open beta",
@@ -64,9 +65,9 @@ const Header = (props) => {
         }`}
       >
         <img src="/icons/portal.png" alt="portals logo" />
+        <i className="bx bx-menu"></i>
         <div className="nav__links">
-          <a href="#intro">Introductions</a>
-          <a href="#projects">Projects</a>
+          <a href="https://timetables.ssdevelopers.xyz">Timetables</a>
           <a href="https://github.com/SS-Developers">Github</a>
         </div>
       </nav>
