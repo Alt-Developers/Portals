@@ -1,9 +1,10 @@
 .nav {
   width: 100%;
   display: flex;
-  padding: 1rem;
+  padding: 2rem;
   justify-content: space-between;
-  border-radius: 1.1rem;
+  background-color: #fd5252;
+  transition: all 0.1s;
 
   @include respond(phone) {
     padding: 0rem;

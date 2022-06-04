@@ -74,6 +74,7 @@ const SimpleModal: React.FC<{}> = (props) => {
         <div className="simpleModal__wrapper">
           <motion.div
             className="simpleModal"
+            initial={{ opacity: 0, y: -200 }}
             animate={
               modalState.isOpen
                 ? {

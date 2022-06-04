@@ -13,8 +13,8 @@ const Header = (props) => {
       subheader: "Timetables v3 is here",
       header: "Next level of Timetables",
       doubleImage: {
-        first: "/icons/Timetables2.png",
-        second: "/icons/Timetables1.png",
+        first: "./icons/Timetables2.png",
+        second: "./icons/Timetables1.png",
       },
       links: [
         {
@@ -57,20 +57,6 @@ const Header = (props) => {
       onKeyDown={(event) => pageControler(event)}
       tabIndex={0}
     >
-      <nav
-        className={`nav ${
-          pageContent[page]["background"].charAt(0) === "#"
-            ? ""
-            : "nav__blurred"
-        }`}
-      >
-        <img src="/icons/portal.png" alt="portals logo" />
-        <i className="bx bx-menu"></i>
-        <div className="nav__links">
-          <a href="https://timetables.ssdevelopers.xyz">Timetables</a>
-          <a href="https://github.com/SS-Developers">Github</a>
-        </div>
-      </nav>
       <i
         className={`bx bxs-chevron-left header__leftIcon ${
           page - 1 < 0 ? "header__inactiveIcon" : ""

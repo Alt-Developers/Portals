@@ -40,6 +40,7 @@
       right: 50% !important;
       transform: translateX(50%);
       width: 90% !important;
+      box-shadow: 0 0 4.8rem rgba(0, 0, 0, 0.1);
       // height: 30% !important;
       // bottom: 10rem !important;
     }
@@ -104,7 +105,8 @@
 
 .prideBlock {
   grid-area: pride;
-  background: url("/icons/rainbow.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.05)),
+    url("/icons/rainbow.jpg");
   background-size: cover;
   position: relative;
   display: flex;
@@ -141,15 +143,14 @@
     border-radius: 1.1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
     p {
-      padding: 2rem;
+      // padding: 2rem;
       border-radius: 1.1rem;
-      background-color: rgb(241, 241, 241);
-      border: 1px solid var(--gray-dark-1);
+      color: #fff;
       backdrop-filter: blur(1.1rem);
-      color: #000;
+      text-shadow: 0 0 4.8rem #00000050;
 
       @include respond(phone) {
         font-size: 1.3rem;

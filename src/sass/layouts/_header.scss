@@ -1,5 +1,5 @@
 .header {
-  height: 85vh;
+  height: 70vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,7 +13,7 @@
     width: 40vw;
     position: absolute;
     left: 10rem;
-    bottom: 50%;
+    bottom: 60%;
     // transform: translateY(50%);
     color: #fff;
 
@@ -108,10 +108,10 @@
 
   &__imageGroup {
     position: absolute;
-    bottom: 50%;
+    bottom: 60%;
     transform: translateY(50%);
     right: 10vw;
-    height: 65%;
+    height: 75%;
     width: 45%;
 
     @include respond(tab-land) {
@@ -198,7 +198,7 @@
 
   &__leftIcon {
     position: absolute;
-    bottom: 50%;
+    bottom: 60%;
     left: 3rem;
     font-size: 4rem;
     transform: translateY(50%);
@@ -211,7 +211,7 @@
 
   &__rightIcon {
     position: absolute;
-    bottom: 50%;
+    bottom: 60%;
     right: 3rem;
     font-size: 4rem;
     transform: translateY(50%);

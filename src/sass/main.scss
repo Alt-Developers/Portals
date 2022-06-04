@@ -13,6 +13,7 @@
 @import "base/utilities";
 
 @import "components/blocks";
+@import "components/markdown";
 
 @import "layouts/header";
 @import "layouts/navigation";
@@ -20,4 +21,4 @@
 
 // @import "lib/simpleModal";
 
-// @import "pages/home";
+@import "pages/posts";

@@ -1,0 +1,101 @@
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100vh;
+
+  &__nav {
+    padding: 3rem;
+    border-right: 1px solid var(--gray-dark-1);
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      //   border-bottom: 1px solid var(--gray-dark-1);
+    }
+  }
+
+  &__navItem {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.2s;
+    border-radius: 1.1rem;
+
+    &:hover {
+      background-color: #e9e9e9;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 500;
+      height: 2rem;
+      margin: 0;
+    }
+
+    i {
+      padding: 2rem;
+      font-size: 2rem;
+      color: #fff;
+      background-color: #fd525250;
+      border-radius: 1.1rem;
+    }
+  }
+
+  &__navItemList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__main {
+    padding: 3rem;
+    overflow-y: scroll;
+  }
+
+  &__header {
+    position: relative;
+    margin: -3rem;
+    padding: 3rem;
+    height: 40vh;
+    margin-bottom: 1rem;
+    background-image: url("https://img.freepik.com/free-vector/abstract-sky-pastel-rainbow-gradient-background-ecology-concept-your-graphic-design_29865-1661.jpg?w=2000"),
+      linear-gradient(
+        323deg,
+        rgba(255, 255, 255, 0) 51%,
+        rgba(0, 0, 0, 0.4) 100%
+      );
+    background-blend-mode: multiply;
+
+    h1 {
+      font-size: 4.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      width: 70%;
+      color: #fff;
+
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 1.1rem;
+    border: 1px solid var(--gray-dark-1);
+    height: 30vh;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
